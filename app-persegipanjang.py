@@ -11,9 +11,11 @@ def send(sum=sum):
     if request.method == "POST":
         persegipanjang = request.form["persegipanjang"]
         persegipanjang2= request.form["persegipanjang2"]
-        sum = float(persegipanjang) * 2
-        sum2 = float(persegipanjang2) * 3
-        return render_template("persegipanjang.html", sum=sum, sum2=sum2)
+        sum = float(persegipanjang)
+        sum2 = float(persegipanjang2)
+        sum3 = sum * sum2
+        sum4 = sum + sum2 * 2
+        return render_template("persegipanjang.html", sum=sum3, sum2=sum4)
     else:
         return render_template("persegipanjang.html")
 
