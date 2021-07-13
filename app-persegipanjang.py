@@ -14,7 +14,7 @@ def send(sum=sum):
         sum = float(persegipanjang)
         sum2 = float(persegipanjang2)
         sum3 = sum * sum2
-        sum4 = sum + sum2 * 2
+        sum4 = 2 * (sum + sum2)
         return render_template("persegipanjang.html", sum=sum3, sum2=sum4)
     else:
         return render_template("persegipanjang.html")
